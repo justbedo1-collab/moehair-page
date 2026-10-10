@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرشاة موهير الأصلية بالضمان - وداعاً للشعر المنكوش!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4fbfa;
+            color: #2d3748;
+        }
+        .main-gradient {
+            background: linear-gradient(135deg, #0bc5ea 0%, #ed64a6 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header / Hero Section -->
+    <header class="main-gradient text-white py-14 px-4 shadow-xl text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-white text-pink-600 text-sm font-extrabold px-5 py-2 rounded-full shadow-md inline-block mb-4 animate-pulse">
+                🔥 عرض لفترة محدودة - الدفع عند الاستلام ومعاينة المنتج!
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">
+                فرشاة موهير الأصلية بالضمان 💇‍♀️✨
+            </h1>
+            <p class="text-lg md:text-xl font-medium max-w-2xl mx-auto mb-6 text-white/95">
+                احصلي على شعر ناعم ومصفف باحترافية من أول استخدام. يلا مستنية إيه؟ اطلبي حالاً ومتسبيش شعرك منكوش! 🤭💖
+            </p>
+            <div class="inline-flex items-center gap-4 bg-white/20 backdrop-blur-md px-8 py-3 rounded-2xl border border-white/30 shadow-inner">
+                <span class="text-4xl font-black text-yellow-300">700 جنيه</span>
+                <span class="text-xl line-through text-gray-200">850 جنيه</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content & Order Form Container -->
+    <main class="max-w-4xl w-full mx-auto px-4 py-12 flex-grow">
+        
+        <!-- Features Section -->
+        <section class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-3xl shadow-lg border-t-4 border-[#0bc5ea]">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    ⚡ المواصفات الفنية
+                </h3>
+                <ul class="space-y-3 text-gray-600 font-semibold">
+                    <li>🔹 قوة جبارة: <strong>2400 وات</strong> لتجفيف وتصفيف فائق السرعة.</li>
+                    <li>🔹 وظائف 3 في 1: (تجفيف، تمليس، تمويج).</li>
+                    <li>🔹 تصميم بيضاوي ذكي لتوزيع الحرارة بشكل مثالي.</li>
+                    <li>🔹 إعدادات متعددة للحرارة والسرعة تناسب جميع أنواع الشعر.</li>
+                    <li>🔹 مقبض مريح وسلك دوّار 360 درجة لسهولة الاستخدام.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow-lg border-t-4 border-[#ed64a6]">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    🛡️ الضمان والخدمة
+                </h3>
+                <ul class="space-y-3 text-gray-600 font-semibold">
+                    <li>✨ <strong>ضمان كامل</strong> على المنتج لجودة تدوم طويلاً.</li>
+                    <li>📦 متاح إمكانية <strong>الاستبدال والاسترجاع</strong> بكل سهولة.</li>
+                    <li>🔍 متاح إمكانية <strong>الدفع عند الاستلام ومعاينة المنتج</strong> قبل الاستلام.</li>
+                    <li>🚀 مناسبة للاستخدام المنزلي أو السفر لإطلالة ساحرة كل يوم!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="order-form" class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 border border-gray-100">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black text-gray-800 mb-2">استعدي لتتألقي.. اطلبيها الآن! 👑</h2>
+                <p class="text-gray-500 font-medium">أدخلي بياناتك بدقة وسنتواصل معك لتأكيد الطلب والشحن الفوري.</p>
+            </div>
+
+            <form id="safqahForm" onsubmit="submitOrder(event)" class="space-y-6">
+                
+                <!-- Customer Name -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">اسم العميل (ثلاثي):</label>
+                    <input type="text" id="customer_name" required placeholder="اكتبي اسمك الكامل هنا..." 
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition font-medium">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Primary Phone -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">رقم الهاتف الأساسي:</label>
+                        <input type="tel" id="customer_phone" required placeholder="010xxxxxxxx" 
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition font-medium">
+                    </div>
+
+                    <!-- Alternative Phone -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">رقم الهاتف البديل (اختياري):</label>
+                        <input type="tel" id="customer_phone_alt" placeholder="رقم إضافي للطوارئ..." 
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition font-medium">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Governorate / Shipping -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">المحافظة:</label>
+                        <select id="governorate" required onchange="updateTotal()" 
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition bg-white font-medium">
+                            <option value="" disabled selected>اختاري محافظتك...</option>
+                            <option value="القاهرة" data-shipping="85">القاهرة (85 جنيه)</option>
+                            <option value="الجيزة" data-shipping="85">الجيزة (85 جنيه)</option>
+                            <option value="الإسكندرية" data-shipping="85">الإسكندرية (85 جنيه)</option>
+                            <option value="الدقهلية" data-shipping="85">الدقهلية (85 جنيه)</option>
+                            <option value="الغربية" data-shipping="85">الغربية (85 جنيه)</option>
+                            <option value="المنوفية" data-shipping="85">المنوفية (85 جنيه)</option>
+                            <option value="الشرقية" data-shipping="85">الشرقية (85 جنيه)</option>
+                            <option value="القليوبية" data-shipping="85">القليوبية (85 جنيه)</option>
+                            <option value="البحيرة" data-shipping="85">البحيرة (85 جنيه)</option>
+                            <option value="كفر الشيخ" data-shipping="85">كفر الشيخ (85 جنيه)</option>
+                            <option value="دمياط" data-shipping="85">دمياط (85 جنيه)</option>
+                            <option value="بور سعيد" data-shipping="85">بورسعيد (85 جنيه)</option>
+                            <option value="الإسماعيلية" data-shipping="85">الإسماعيلية (85 جنيه)</option>
+                            <option value="السويس" data-shipping="85">السويس (85 جنيه)</option>
+                            <option value="الفيوم" data-shipping="85">الفيوم (85 جنيه)</option>
+                            <option value="بني سويف" data-shipping="95">بني سويف (95 جنيه)</option>
+                            <option value="المنيا" data-shipping="95">المنيا (95 جنيه)</option>
+                            <option value="أسيوط" data-shipping="95">أسيوط (95 جنيه)</option>
+                            <option value="سوهاج" data-shipping="95">سوهاج (95 جنيه)</option>
+                            <option value="قنا" data-shipping="95">قنا (95 جنيه)</option>
+                            <option value="الأقصر" data-shipping="95">الأقصر (95 جنيه)</option>
+                            <option value="أسوان" data-shipping="95">أسوان (95 جنيه)</option>
+                            <option value="البحر الأحمر" data-shipping="95">البحر الأحمر (95 جنيه)</option>
+                            <option value="مرسى مطروح" data-shipping="110">مرسى مطروح (110 جنيه)</option>
+                            <option value="جنوب سيناء" data-shipping="110">جنوب سيناء (110 جنيه)</option>
+                            <option value="الوادي الجديد" data-shipping="110">الوادي الجديد (110 جنيه)</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">الكمية (عدد القطع):</label>
+                        <input type="number" id="quantity" min="1" value="1" required oninput="updateTotal()" 
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition font-medium">
+                    </div>
+                </div>
+
+                <!-- Detailed Address -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">العنوان بالتفصيل (الشارع، رقم العمارة، الشقة، العلامة المميزة):</label>
+                    <textarea id="address" rows="3" required placeholder="اكتب العنوان بالتفصيل لضمان سرعة وسهولة التوصيل..." 
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#0bc5ea] focus:outline-none transition font-medium"></textarea>
+                </div>
+
+                <!-- Price Summary Box -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 flex justify-between items-center text-lg font-bold">
+                    <span class="text-gray-700">إجمالي المبلغ المطلوب (مع الشحن):</span>
+                    <span id="total_price_display" class="text-pink-600 text-3xl font-black">785 جنيه</span>
+                </div>
+
+                <!-- Hidden Input for Exact Price to API -->
+                <input type="hidden" id="total_price" value="785">
+
+                <!-- Submit Button -->
+                <button type="submit" id="submit-btn"
+                    class="w-full main-gradient text-white font-black text-2xl py-4 rounded-2xl shadow-xl hover:opacity-95 transition transform hover:-translate-y-0.5 cursor-pointer">
+                    🛒 تأكيد الطلب
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer / Copyrights
